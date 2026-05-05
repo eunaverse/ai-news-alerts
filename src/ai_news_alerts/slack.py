@@ -94,11 +94,11 @@ def _format_item(index: int, item: BriefItem) -> list[str]:
 
     return [
         f"{index}. *{slack_escape(item.title)}*",
-        f"Why it matters: {slack_escape(_clean(item.why_it_matters))}",
-        f"Quick read: {slack_escape(_clean(item.quick_read))}",
-        f"Signal: {slack_escape(_clean(item.signal))}",
-        f"Phrase: \"{slack_escape(_clean(item.phrase))}\"",
-        " · ".join(links),
+        f"- Why it matters: {slack_escape(_clean(item.why_it_matters))}",
+        f"- Quick read: {slack_escape(_clean(item.quick_read))}",
+        f"- Signal: {slack_escape(_clean(item.signal))}",
+        f"- Phrase: \"{slack_escape(_clean(item.phrase))}\"",
+        f"- Links: {' · '.join(links)}",
     ]
 
 

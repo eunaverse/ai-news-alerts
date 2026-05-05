@@ -49,12 +49,15 @@ def test_format_brief_is_compact_english_and_includes_signals() -> None:
 
     assert "*Daily AI Trend Brief - May 6, 2026 KST*" in text
     assert "1 items | HN-first, official news, open-source trends" in text
-    assert "Why it matters:" in text
-    assert "Quick read:" in text
-    assert "Signal: HN 428 pts / 132 comments; GitHub 3.2k stars; Rust" in text
-    assert 'Phrase: "production readiness"' in text
-    assert "<https://github.com/acme/runtime-1|Source>" in text
-    assert "<https://news.ycombinator.com/item?id=1|Discussion>" in text
+    assert "1. *[Open source] Runtime 1*" in text
+    assert "- Why it matters: It affects serving cost and latency for AI platforms." in text
+    assert "- Quick read: A compact repo description explains the core change." in text
+    assert "- Signal: HN 428 pts / 132 comments; GitHub 3.2k stars; Rust" in text
+    assert '- Phrase: "production readiness"' in text
+    assert (
+        "- Links: <https://github.com/acme/runtime-1|Source> · "
+        "<https://news.ycombinator.com/item?id=1|Discussion>"
+    ) in text
     assert "Source warnings" in text
 
 
