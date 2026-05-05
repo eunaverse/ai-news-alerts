@@ -1,0 +1,57 @@
+timezone: Asia/Seoul
+target_items: 7
+max_items: 10
+message_max_chars: 12000
+rss_max_age_days: 7
+
+hacker_news:
+  max_ids_per_feed: 25
+  feeds:
+    - topstories
+    - beststories
+    - showstories
+  min_score: 30
+  min_comments: 5
+
+keywords:
+  - ai
+  - agent
+  - agents
+  - backend
+  - benchmark
+  - coding
+  - database
+  - data platform
+  - developer tools
+  - distributed
+  - eval
+  - gpt
+  - claude
+  - gemini
+  - deepseek
+  - inference
+  - infrastructure
+  - latency
+  - llm
+  - machine learning
+  - model
+  - model serving
+  - platform
+  - rag
+  - retrieval
+  - runtime
+  - vector
+
+official_feeds:
+  - name: OpenAI
+    url: https://openai.com/news/rss.xml
+  - name: Google DeepMind
+    url: https://deepmind.google/blog/rss.xml
+  - name: Google AI
+    url: https://blog.google/technology/ai/rss/
+  - name: Google Research
+    url: https://research.google/blog/rss/
+  - name: AWS Machine Learning
+    url: https://aws.amazon.com/blogs/machine-learning/feed/
+  - name: NVIDIA Developer
+    url: https://developer.nvidia.com/blog/feed/

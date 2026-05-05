@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-news-alerts"
+version = "0.1.0"
+description = "Daily Slack briefs for AI trends from Hacker News, official blogs, and open-source signals"
+requires-python = ">=3.12"
+dependencies = [
+  "feedparser>=6.0.11",
+  "PyYAML>=6.0.1",
+  "requests>=2.32.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0"
+]
+
+[project.scripts]
+ai-news-alerts = "ai_news_alerts.main:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
