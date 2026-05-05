@@ -1,3 +1,11 @@
 {
-  "seen": {}
+  "seen": {
+    "https://acai.sh/blog/specsmaxxing": "2026-05-05T04:03:31.993623+00:00",
+    "https://addyosmani.com/blog/agent-skills": "2026-05-05T04:03:31.993629+00:00",
+    "https://github.com/aattaran/deepclaude": "2026-05-05T04:03:31.993594+00:00",
+    "https://github.com/bring-shrubbery/ml-sharp-web": "2026-05-05T04:03:31.993626+00:00",
+    "https://larsfaye.com/articles/agentic-coding-is-a-trap": "2026-05-05T04:03:31.993614+00:00",
+    "https://openai.com/index/delivering-low-latency-voice-ai-at-scale": "2026-05-05T04:03:31.993620+00:00",
+    "https://thinkpol.ca/2026/04/30/an-open-weights-chinese-model-just-beat-claude-gpt-5-5-and-gemini-in-a-programming-challenge": "2026-05-05T04:03:31.993618+00:00"
+  }
 }
