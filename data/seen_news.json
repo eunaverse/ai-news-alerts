@@ -2,7 +2,12 @@
   "seen": {
     "https://acai.sh/blog/specsmaxxing": "2026-05-05T04:03:31.993623+00:00",
     "https://addyosmani.com/blog/agent-skills": "2026-05-05T04:03:31.993629+00:00",
+    "https://avkcode.github.io/blog/us-winning-ai-race.html": "2026-05-13T22:10:00.077851+00:00",
+    "https://aws.amazon.com/blogs/machine-learning/build-financial-document-processing-with-pulse-ai-and-amazon-bedrock": "2026-05-13T22:10:00.077881+00:00",
+    "https://aws.amazon.com/blogs/machine-learning/fine-tune-llm-with-databricks-unity-catalog-and-amazon-sagemaker-ai": "2026-05-13T22:10:00.077887+00:00",
     "https://aws.amazon.com/blogs/machine-learning/halliburton-enhances-seismic-workflow-creation-with-amazon-bedrock-and-generative-ai": "2026-05-10T21:45:29.355683+00:00",
+    "https://aws.amazon.com/blogs/machine-learning/securing-ai-agents-how-aws-and-cisco-ai-defense-scale-mcp-and-a2a-deployments": "2026-05-13T22:10:00.077884+00:00",
+    "https://bitplane.net/log/2026/05/rars": "2026-05-13T22:10:00.077871+00:00",
     "https://blog.cloudflare.com/agents-stripe-projects": "2026-05-06T21:56:01.537788+00:00",
     "https://blog.google/company-news/inside-google/company-announcements/the-small-brief": "2026-05-09T21:41:31.500952+00:00",
     "https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4": "2026-05-05T22:00:13.410272+00:00",
@@ -44,6 +49,7 @@
     "https://mljar.com/": "2026-05-05T04:10:07.053367+00:00",
     "https://news.ycombinator.com/item?id=48037336": "2026-05-08T21:57:56.054758+00:00",
     "https://news.ycombinator.com/item?id=48060054": "2026-05-09T21:41:31.500770+00:00",
+    "https://news.ycombinator.com/item?id=48110593": "2026-05-13T22:10:00.077875+00:00",
     "https://openai.com/index/delivering-low-latency-voice-ai-at-scale": "2026-05-05T04:03:31.993620+00:00",
     "https://pomiferous.com/": "2026-05-05T04:10:07.053362+00:00",
     "https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities": "2026-05-07T21:56:36.462758+00:00",
@@ -69,6 +75,7 @@
     "https://www.robert-glaser.de/when-everyone-has-ai-and-the-company-still-learns-nothing": "2026-05-05T22:00:13.410276+00:00",
     "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install": "2026-05-05T22:00:13.410257+00:00",
     "https://www.tomshardware.com/pc-components/motherboards/motherboard-sales-collapse-by-more-than-25-percent-as-chipmakers-strangle-enthusiast-pc-market-to-build-more-ai-chips-asus-projected-to-sell-5-million-fewer-boards-in-2025-gigabyte-msi-and-asrock-also-expected-to-see-reduced-sales-numbers": "2026-05-07T21:56:36.462784+00:00",
-    "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises": "2026-05-11T22:06:22.860065+00:00"
+    "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises": "2026-05-11T22:06:22.860065+00:00",
+    "https://www.tryardent.com/": "2026-05-13T22:10:00.077878+00:00"
   }
 }
