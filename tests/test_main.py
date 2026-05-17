@@ -33,6 +33,10 @@ def _item() -> BriefItem:
         quick_read="A compact description explains the core change.",
         signal="HN 100 pts / 20 comments",
         phrase="production readiness",
+        career_action=(
+            "Interview angle: serving latency; Resume/JD keyword: inference runtime; "
+            "Watch: AI infrastructure teams; Follow-up: skim the source and save one system-design trade-off."
+        ),
         source_url="https://example.com",
         discussion_url="https://news.ycombinator.com/item?id=1",
         fingerprint="https://example.com",

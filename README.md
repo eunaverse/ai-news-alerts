@@ -27,6 +27,7 @@ Why it matters: It can affect serving cost, latency, and production AI platform 
 Quick read: A compact repo or source description explains the core change.
 Signal: HN 428 pts / 132 comments; GitHub 3.2k stars; Rust
 Phrase: "production readiness"
+May-Aug career action: Interview angle: serving latency; Resume/JD keyword: inference runtime; Watch: AI infrastructure/platform teams; Follow-up: skim the source and note one production trade-off.
 <https://example.com/source|Source> · <https://news.ycombinator.com/item?id=123|Discussion>
 ```
 
@@ -102,3 +103,11 @@ Selection skips:
 - Crypto/AI hype without infrastructure relevance.
 - Model benchmark posts with no practical engineering angle.
 - Duplicate reposts of the same announcement.
+
+RSS source expansion:
+
+- Add only stable public RSS URLs from official AI, infrastructure, database,
+  cloud, or developer tooling sources.
+- Do not guess feed URLs. If an official source looks useful but the exact RSS
+  URL is uncertain, document it for later verification instead of adding it to
+  `config/sources.yaml`.

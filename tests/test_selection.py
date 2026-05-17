@@ -86,6 +86,121 @@ def test_relevance_filter_does_not_treat_open_source_alone_as_ai_trend() -> None
     assert is_relevant(cable_tool, ["open source", "inference", "agent"]) is False
 
 
+def test_build_brief_items_skips_low_value_consumer_prompt_listicle_and_crypto_hype() -> None:
+    low_value = [
+        TrendCandidate(
+            source="hn:topstories",
+            source_type="hn",
+            title="10 best AI photo apps for your selfies",
+            url="https://example.com/ai-photo-apps",
+            discussion_url=None,
+            published_at=datetime(2026, 5, 5, tzinfo=timezone.utc),
+            score=500,
+            comments_count=100,
+            summary="A consumer-only AI app listicle with no engineering detail.",
+        ),
+        TrendCandidate(
+            source="hn:topstories",
+            source_type="hn",
+            title="Ultimate ChatGPT prompt collection",
+            url="https://example.com/prompts",
+            discussion_url=None,
+            published_at=datetime(2026, 5, 5, tzinfo=timezone.utc),
+            score=400,
+            comments_count=90,
+            summary="Copy these prompts for AI productivity.",
+        ),
+        TrendCandidate(
+            source="hn:topstories",
+            source_type="hn",
+            title="AI crypto token moonshot",
+            url="https://example.com/ai-token",
+            discussion_url=None,
+            published_at=datetime(2026, 5, 5, tzinfo=timezone.utc),
+            score=300,
+            comments_count=80,
+            summary="Hype around a new crypto AI coin.",
+        ),
+        TrendCandidate(
+            source="hn:topstories",
+            source_type="hn",
+            title="New model benchmark leaderboard",
+            url="https://example.com/leaderboard",
+            discussion_url=None,
+            published_at=datetime(2026, 5, 5, tzinfo=timezone.utc),
+            score=300,
+            comments_count=80,
+            summary="A benchmark table with scores only.",
+        ),
+    ]
+    useful = TrendCandidate(
+        source="hn:topstories",
+        source_type="hn",
+        title="AI inference platform cuts serving latency",
+        url="https://example.com/serving",
+        discussion_url=None,
+        published_at=datetime(2026, 5, 5, tzinfo=timezone.utc),
+        score=100,
+        comments_count=10,
+        summary="Engineering details for runtime, deployment, and model serving reliability.",
+    )
+
+    items = build_brief_items(
+        [*low_value, useful],
+        keywords=["ai", "benchmark", "inference", "model", "platform"],
+        seen_store=Store(),
+        github_metadata={},
+        target_items=7,
+        max_items=10,
+        run_date=date(2026, 5, 6),
+    )
+
+    assert [item.source_url for item in items] == ["https://example.com/serving"]
+
+
+def test_build_brief_items_keeps_ai_tokenization_posts() -> None:
+    candidate = TrendCandidate(
+        source="hn:topstories",
+        source_type="hn",
+        title="Multi-token prediction improves LLM inference",
+        url="https://example.com/multi-token-inference",
+        discussion_url=None,
+        published_at=datetime(2026, 5, 5, tzinfo=timezone.utc),
+        score=250,
+        comments_count=80,
+        summary="Model serving details about tokenization, latency, and inference runtime.",
+    )
+
+    items = build_brief_items(
+        [candidate],
+        keywords=["llm", "inference", "runtime", "model"],
+        seen_store=Store(),
+        github_metadata={},
+        target_items=7,
+        max_items=10,
+        run_date=date(2026, 5, 6),
+    )
+
+    assert [item.source_url for item in items] == ["https://example.com/multi-token-inference"]
+
+
+def test_brief_item_includes_deterministic_career_action() -> None:
+    item = build_brief_items(
+        [_candidate(1)],
+        keywords=["inference", "platform"],
+        seen_store=Store(),
+        github_metadata={},
+        target_items=7,
+        max_items=10,
+        run_date=date(2026, 5, 6),
+    )[0]
+
+    assert item.career_action == (
+        "Interview angle: serving latency; Resume/JD keyword: inference runtime; "
+        "Watch: AI infrastructure/platform teams; Follow-up: skim the source and note one production trade-off."
+    )
+
+
 def test_build_brief_items_prefers_hn_dedupes_seen_and_caps_at_max() -> None:
     candidates = [_candidate(i, score=200 - i) for i in range(1, 13)]
     duplicate = _candidate(99, url="https://example.com/item-1", score=500)

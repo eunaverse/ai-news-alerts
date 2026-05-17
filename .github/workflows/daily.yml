@@ -22,6 +22,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: ai-news-alerts-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   daily-brief:
     runs-on: ubuntu-latest
@@ -61,11 +65,35 @@ jobs:
 
       - name: Persist seen news
         if: github.event_name == 'schedule' || inputs.dry_run == 'false'
+        env:
+          SEEN_AFTER_RUN: ${{ runner.temp }}/seen_news.after-run.json
         run: |
+          set -euo pipefail
+          BRANCH_NAME="${GITHUB_REF_NAME:-main}"
+          cp data/seen_news.json "$SEEN_AFTER_RUN"
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin "$BRANCH_NAME"
+          git checkout "origin/$BRANCH_NAME" -- data/seen_news.json
+          python -m ai_news_alerts.seen merge data/seen_news.json "$SEEN_AFTER_RUN"
+
           git add data/seen_news.json
           if ! git diff --cached --quiet; then
             git commit -m "chore: persist seen news"
-            git push
+            if ! git push origin "HEAD:$BRANCH_NAME"; then
+              git fetch origin "$BRANCH_NAME"
+              if ! git rebase "origin/$BRANCH_NAME"; then
+                if git diff --name-only --diff-filter=U | grep -qx "data/seen_news.json"; then
+                  git checkout "origin/$BRANCH_NAME" -- data/seen_news.json
+                  python -m ai_news_alerts.seen merge data/seen_news.json "$SEEN_AFTER_RUN"
+                  git add data/seen_news.json
+                  GIT_EDITOR=true git rebase --continue
+                else
+                  git rebase --abort
+                  exit 1
+                fi
+              fi
+              git push origin "HEAD:$BRANCH_NAME"
+            fi
           fi

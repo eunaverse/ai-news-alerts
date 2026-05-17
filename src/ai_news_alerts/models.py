@@ -42,6 +42,7 @@ class BriefItem:
     quick_read: str
     signal: str
     phrase: str
+    career_action: str
     source_url: str | None
     discussion_url: str | None
     fingerprint: str

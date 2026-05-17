@@ -1,7 +1,7 @@
 import json
 
 from ai_news_alerts.models import BriefItem
-from ai_news_alerts.seen import SeenStore
+from ai_news_alerts.seen import SeenStore, merge_seen_files
 
 
 def _item(fingerprint: str = "abc") -> BriefItem:
@@ -11,6 +11,7 @@ def _item(fingerprint: str = "abc") -> BriefItem:
         quick_read="Read",
         signal="Signal",
         phrase="phrase",
+        career_action="Interview angle: backend platform trade-offs; Resume/JD keyword: AI infrastructure; Watch: platform teams; Follow-up: save one takeaway.",
         source_url="https://example.com",
         discussion_url=None,
         fingerprint=fingerprint,
@@ -44,3 +45,33 @@ def test_constructing_store_does_not_create_file_for_dry_run(tmp_path) -> None:
     SeenStore(path)
 
     assert not path.exists()
+
+
+def test_merge_seen_files_preserves_remote_and_local_entries(tmp_path) -> None:
+    remote = tmp_path / "seen.json"
+    local = tmp_path / "seen.local.json"
+    remote.write_text(
+        json.dumps({"seen": {"https://example.com/remote": "2026-05-01T00:00:00+00:00"}}),
+        encoding="utf-8",
+    )
+    local.write_text(
+        json.dumps(
+            {
+                "seen": {
+                    "https://example.com/remote": "2026-05-02T00:00:00+00:00",
+                    "https://example.com/local": "2026-05-03T00:00:00+00:00",
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    merge_seen_files(remote, local)
+
+    payload = json.loads(remote.read_text(encoding="utf-8"))
+    assert payload == {
+        "seen": {
+            "https://example.com/local": "2026-05-03T00:00:00+00:00",
+            "https://example.com/remote": "2026-05-02T00:00:00+00:00",
+        }
+    }
