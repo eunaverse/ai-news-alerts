@@ -18,6 +18,8 @@ class SeenLookup(Protocol):
 
 
 def is_relevant(candidate: TrendCandidate, keywords: list[str]) -> bool:
+    if _is_low_value(candidate):
+        return False
     haystack = " ".join(
         value
         for value in [
@@ -52,6 +54,8 @@ def build_brief_items(
         if seen_store.is_seen_fingerprint(fingerprint):
             continue
         if _is_stale_rss(candidate, run_date, rss_max_age_days):
+            continue
+        if _is_low_value(candidate):
             continue
         if not is_relevant(candidate, keywords):
             continue
@@ -169,6 +173,7 @@ def _brief_item_from_candidate(candidate: TrendCandidate, github: GitHubMetadata
         quick_read=_quick_read(candidate, github),
         signal=_signal(candidate, github),
         phrase=_phrase(candidate),
+        career_action=_career_action(candidate),
         source_url=source_url,
         discussion_url=candidate.discussion_url,
         fingerprint=fingerprint,
@@ -236,8 +241,89 @@ def _phrase(candidate: TrendCandidate) -> str:
     return "career-relevant signal"
 
 
+def _career_action(candidate: TrendCandidate) -> str:
+    text = _combined_text(candidate)
+    if any(term in text for term in ["inference", "serving", "runtime", "latency"]):
+        return (
+            "Interview angle: serving latency; Resume/JD keyword: inference runtime; "
+            "Watch: AI infrastructure/platform teams; Follow-up: skim the source and note one production trade-off."
+        )
+    if any(term in text for term in ["agent", "coding", "developer tool", "ide"]):
+        return (
+            "Interview angle: agent workflow design; Resume/JD keyword: developer tooling; "
+            "Watch: agent platform/dev-experience teams; Follow-up: save one workflow automation example."
+        )
+    if any(term in text for term in ["database", "retrieval", "rag", "vector", "data platform"]):
+        return (
+            "Interview angle: retrieval architecture; Resume/JD keyword: RAG/vector search; "
+            "Watch: data platform/search infrastructure teams; Follow-up: sketch the data path in 3 steps."
+        )
+    if any(term in text for term in ["eval", "benchmark", "reliability"]):
+        return (
+            "Interview angle: evaluation design; Resume/JD keyword: model reliability; "
+            "Watch: ML platform/reliability teams; Follow-up: capture one metric or failure mode."
+        )
+    return (
+        "Interview angle: backend platform trade-offs; Resume/JD keyword: AI infrastructure; "
+        "Watch: platform/infrastructure teams; Follow-up: save one practical engineering takeaway."
+    )
+
+
 def _combined_text(candidate: TrendCandidate) -> str:
     return f"{candidate.title} {candidate.summary or ''} {candidate.url or ''}".lower()
+
+
+def _is_low_value(candidate: TrendCandidate) -> bool:
+    text = _combined_text(candidate)
+    title = candidate.title.lower()
+    has_engineering_angle = any(
+        term in text
+        for term in [
+            "architecture",
+            "backend",
+            "database",
+            "data platform",
+            "deploy",
+            "developer tool",
+            "distributed",
+            "eval harness",
+            "inference",
+            "infrastructure",
+            "latency",
+            "model serving",
+            "platform",
+            "production",
+            "rag",
+            "reliability",
+            "retrieval",
+            "runtime",
+            "serving",
+            "vector",
+        ]
+    )
+    if any(term in text for term in ["prompt collection", "prompt pack", "prompt library", "chatgpt prompts"]):
+        return True
+    crypto_hype_terms = [
+        "airdrop",
+        "blockchain",
+        "coin",
+        "crypto",
+        "crypto token",
+        "defi",
+        "memecoin",
+        "nft",
+        "token moonshot",
+        "web3",
+    ]
+    if any(term in text for term in crypto_hype_terms) and not has_engineering_angle:
+        return True
+    if any(term in text for term in ["photo app", "selfie", "avatar app", "dating app", "social app"]) and not has_engineering_angle:
+        return True
+    if any(term in title for term in ["best ai", "top ai", "list of ai", "10 best", "ultimate guide"]) and not has_engineering_angle:
+        return True
+    if any(term in text for term in ["leaderboard", "scores only", "benchmark table"]) and not has_engineering_angle:
+        return True
+    return False
 
 
 def _keyword_matches(haystack: str, keyword: str) -> bool:

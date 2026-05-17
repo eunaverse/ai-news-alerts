@@ -98,6 +98,7 @@ def _format_item(index: int, item: BriefItem) -> list[str]:
         f"- Quick read: {slack_escape(_clean(item.quick_read))}",
         f"- Signal: {slack_escape(_clean(item.signal))}",
         f"- Phrase: \"{slack_escape(_clean(item.phrase))}\"",
+        f"- May-Aug career action: {slack_escape(_clean(item.career_action))}",
         f"- Links: {' · '.join(links)}",
     ]
 

@@ -28,6 +28,10 @@ def test_model_contracts_hold_trend_and_brief_fields() -> None:
         quick_read="A runtime for cheaper LLM serving.",
         signal="HN 428 pts / 132 comments; GitHub 3.2k stars; Rust",
         phrase="production readiness",
+        career_action=(
+            "Interview angle: serving latency; Resume/JD keyword: inference runtime; "
+            "Watch: AI infrastructure teams; Follow-up: skim the source and save one system-design trade-off."
+        ),
         source_url=candidate.url,
         discussion_url=candidate.discussion_url,
         fingerprint="github.com/acme/runtime",
@@ -36,5 +40,6 @@ def test_model_contracts_hold_trend_and_brief_fields() -> None:
     status = SourceStatus(source="hn", status="success", message="ok", item_count=1)
 
     assert candidate.is_hn is True
+    assert item.career_action.startswith("Interview angle:")
     assert item.github == github
     assert status.status == "success"

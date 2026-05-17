@@ -13,6 +13,10 @@ def _item(index: int = 1, title: str = "[Open source] Runtime") -> BriefItem:
         quick_read="A compact repo description explains the core change.",
         signal="HN 428 pts / 132 comments; GitHub 3.2k stars; Rust",
         phrase="production readiness",
+        career_action=(
+            "Interview angle: serving latency; Resume/JD keyword: inference runtime; "
+            "Watch: AI infrastructure teams; Follow-up: skim the source and save one system-design trade-off."
+        ),
         source_url=f"https://github.com/acme/runtime-{index}",
         discussion_url=f"https://news.ycombinator.com/item?id={index}",
         fingerprint=f"runtime-{index}",
@@ -54,6 +58,10 @@ def test_format_brief_is_compact_english_and_includes_signals() -> None:
     assert "- Quick read: A compact repo description explains the core change." in text
     assert "- Signal: HN 428 pts / 132 comments; GitHub 3.2k stars; Rust" in text
     assert '- Phrase: "production readiness"' in text
+    assert (
+        "- May-Aug career action: Interview angle: serving latency; Resume/JD keyword: inference runtime; "
+        "Watch: AI infrastructure teams; Follow-up: skim the source and save one system-design trade-off."
+    ) in text
     assert (
         "- Links: <https://github.com/acme/runtime-1|Source> · "
         "<https://news.ycombinator.com/item?id=1|Discussion>"
