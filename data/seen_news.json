@@ -26,6 +26,7 @@
     "https://deepmind.google/blog/alphaevolve-impact": "2026-05-07T21:56:36.462782+00:00",
     "https://deepmind.google/models/gemini-omni": "2026-05-19T22:14:50.235043+00:00",
     "https://developer.nvidia.com/blog/improving-bash-generation-in-small-language-models-with-grammar-constrained-decoding": "2026-05-09T21:41:31.500950+00:00",
+    "https://developer.nvidia.com/blog/synthesize-realistic-3d-medical-images-at-scale-to-ship-pre-trained-models": "2026-05-23T21:53:24.400717+00:00",
     "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli": "2026-05-20T22:23:35.038441+00:00",
     "https://emptysqua.re/blog/intro-to-tla-plus-for-the-llm-era": "2026-05-19T22:14:50.235052+00:00",
     "https://frederickvanbrabant.com/blog/2026-05-15-i-dont-think-ai-will-make-your-processes-go-faster": "2026-05-17T21:53:40.017893+00:00",
@@ -47,6 +48,7 @@
     "https://github.com/bytedance/lance": "2026-05-20T22:23:35.038448+00:00",
     "https://github.com/cactus-compute/needle": "2026-05-12T22:11:07.282935+00:00",
     "https://github.com/darkrishabh/agent-skills-eval": "2026-05-08T21:57:56.054787+00:00",
+    "https://github.com/fredantb/spec-driven-development": "2026-05-23T21:53:24.400713+00:00",
     "https://github.com/freenet/river": "2026-05-21T22:18:29.628198+00:00",
     "https://github.com/glycemicgpt/glycemicgpt": "2026-05-15T21:58:29.767049+00:00",
     "https://github.com/insforge/insforge": "2026-05-18T22:01:22.033907+00:00",
@@ -70,6 +72,7 @@
     "https://idiallo.com/blog/ai-didnt-delete-your-database-you-did": "2026-05-05T22:00:13.410266+00:00",
     "https://iesna.eu/?wasm=skyglow_demo": "2026-05-05T04:10:07.053369+00:00",
     "https://interfaze.ai/blog/interfaze-a-new-model-architecture-built-for-high-accuracy-at-scale": "2026-05-11T22:06:22.860072+00:00",
+    "https://isaiprofitable.com/": "2026-05-23T21:53:24.400710+00:00",
     "https://jpain.io/god-damn-ai-is-making-me-dumb": "2026-05-14T22:09:55.468867+00:00",
     "https://kabir.au/blog/the-ctf-scene-is-dead": "2026-05-16T21:46:49.555723+00:00",
     "https://larsfaye.com/articles/agentic-coding-is-a-trap": "2026-05-05T04:03:31.993614+00:00",
@@ -97,6 +100,7 @@
     "https://pomiferous.com/": "2026-05-05T04:10:07.053362+00:00",
     "https://professorgoose.com/": "2026-05-15T21:58:29.767056+00:00",
     "https://qwen.ai/blog?id=qwen3.7": "2026-05-20T22:23:35.038421+00:00",
+    "https://qz.com/samsung-chip-workers-bonus-ai-profits-052126": "2026-05-23T21:53:24.400707+00:00",
     "https://reubenbrooks.dev/blog/structural-backpressure-beats-smarter-agents": "2026-05-20T22:23:35.038445+00:00",
     "https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities": "2026-05-07T21:56:36.462758+00:00",
     "https://sander.ai/2026/05/06/flow-maps.html": "2026-05-06T21:56:01.537815+00:00",
@@ -126,6 +130,7 @@
     "https://www.hypercubic.ai/hopper": "2026-05-12T22:11:07.282947+00:00",
     "https://www.jamesshore.com/v2/blog/2026/you-need-ai-that-reduces-your-maintenance-costs": "2026-05-11T22:06:22.860048+00:00",
     "https://www.jefftk.com/p/ai-is-breaking-two-vulnerability-cultures": "2026-05-08T21:57:56.054781+00:00",
+    "https://www.joshwcomeau.com/email/wham-launch-005-elephant-2-p": "2026-05-23T21:53:24.400703+00:00",
     "https://www.kanbots.dev/": "2026-05-22T22:06:38.190634+00:00",
     "https://www.nbcnews.com/tech/tech-news/former-google-ceo-booed-graduation-speech-ai-rcna345585": "2026-05-18T22:01:22.033895+00:00",
     "https://www.nytimes.com/2026/05/08/technology/meta-ai-employees-miserable.html": "2026-05-10T21:45:29.355650+00:00",
@@ -136,9 +141,11 @@
     "https://www.thehandbasket.co/p/hating-ai-is-good-actually": "2026-05-22T22:06:38.190624+00:00",
     "https://www.theregister.com/ai-ml/2026/05/14/ontario-auditors-find-doctors-ai-note-takers-routinely-blow-basic-facts/5240771": "2026-05-15T21:58:29.766976+00:00",
     "https://www.thestateofbrand.com/news/ai-subscription-time-bomb": "2026-05-17T21:53:40.017897+00:00",
+    "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad": "2026-05-23T21:53:24.400684+00:00",
     "https://www.tomshardware.com/pc-components/motherboards/motherboard-sales-collapse-by-more-than-25-percent-as-chipmakers-strangle-enthusiast-pc-market-to-build-more-ai-chips-asus-projected-to-sell-5-million-fewer-boards-in-2025-gigabyte-msi-and-asrock-also-expected-to-see-reduced-sales-numbers": "2026-05-07T21:56:36.462784+00:00",
     "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises": "2026-05-11T22:06:22.860065+00:00",
     "https://www.tomshardware.com/tech-industry/cryptocurrency/bitcoin-trader-recovers-usd400-000-using-claude-ai-after-losing-wallet-password-11-years-ago-bot-tried-3-5-trillion-passwords-before-decrypting-an-old-wallet-backup": "2026-05-14T22:09:55.468871+00:00",
-    "https://www.tryardent.com/": "2026-05-13T22:10:00.077878+00:00"
+    "https://www.tryardent.com/": "2026-05-13T22:10:00.077878+00:00",
+    "https://www.usepablo.dev/": "2026-05-23T21:53:24.400715+00:00"
   }
 }
