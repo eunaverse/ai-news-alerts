@@ -21,6 +21,7 @@
     "https://aws.amazon.com/blogs/machine-learning/accelerate-campaign-workflow-with-insights-from-adobe-marketing-agent-for-amazon-quick": "2026-06-19T22:02:23.544825+00:00",
     "https://aws.amazon.com/blogs/machine-learning/agentwatch-proactive-aws-monitoring-with-ambient-agents": "2026-05-26T22:18:21.458383+00:00",
     "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-is-now-generally-available-go-from-idea-to-production-grade-agent-in-minutes": "2026-06-21T22:13:08.566765+00:00",
+    "https://aws.amazon.com/blogs/machine-learning/best-practices-for-multi-turn-reinforcement-learning-in-amazon-sagemaker-ai": "2026-07-04T21:57:07.811961+00:00",
     "https://aws.amazon.com/blogs/machine-learning/build-financial-document-processing-with-pulse-ai-and-amazon-bedrock": "2026-05-13T22:10:00.077881+00:00",
     "https://aws.amazon.com/blogs/machine-learning/build-high-performance-generative-ai-systems-with-strands-agents-nvidia-nim-and-amazon-bedrock-agentcore": "2026-05-26T22:18:21.458381+00:00",
     "https://aws.amazon.com/blogs/machine-learning/build-highly-scalable-serverless-langgraph-multi-agent-systems-in-aws-with-amazon-bedrock-agentcore": "2026-05-26T22:18:21.458377+00:00",
@@ -35,6 +36,7 @@
     "https://aws.amazon.com/blogs/machine-learning/monitor-and-debug-generative-ai-inference-with-sagemaker-detailed-metrics-and-insights-dashboard-on-cloudwatch": "2026-06-21T22:13:08.566762+00:00",
     "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-ultra-now-available-on-amazon-sagemaker-jumpstart": "2026-06-07T22:02:28.895424+00:00",
     "https://aws.amazon.com/blogs/machine-learning/pair-nova-2-lite-with-claude-for-cost-optimized-document-processing": "2026-06-29T22:07:23.129001+00:00",
+    "https://aws.amazon.com/blogs/machine-learning/run-nvidia-nemotron-and-openai-gpt-oss-models-on-amazon-bedrock-in-aws-govcloud-us": "2026-07-04T21:57:07.811965+00:00",
     "https://aws.amazon.com/blogs/machine-learning/safeguard-your-agentic-ai-applications-with-the-amazon-bedrock-guardrails-invokeguardrailchecks-api": "2026-06-16T22:52:38.523443+00:00",
     "https://aws.amazon.com/blogs/machine-learning/securing-ai-agents-how-aws-and-cisco-ai-defense-scale-mcp-and-a2a-deployments": "2026-05-13T22:10:00.077884+00:00",
     "https://axelk.ee/ai-is-just-unauthorised-plagiarism-at-a-bigger-scale": "2026-05-21T22:18:29.628168+00:00",
@@ -48,6 +50,7 @@
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5": "2026-05-19T22:14:50.235022+00:00",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos": "2026-05-31T21:58:01.589467+00:00",
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash": "2026-06-24T22:15:39.291039+00:00",
+    "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026": "2026-07-04T21:57:07.811963+00:00",
     "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026": "2026-06-07T22:02:28.895420+00:00",
     "https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz": "2026-05-31T21:58:01.589465+00:00",
     "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b": "2026-06-03T23:05:16.204443+00:00",
@@ -114,6 +117,7 @@
     "https://github.com/adam-cad/cadam": "2026-05-05T04:10:07.053365+00:00",
     "https://github.com/adamjgmiller/adamsreview": "2026-05-11T22:06:22.860075+00:00",
     "https://github.com/airbytehq/airbyte-agents-benchmarks": "2026-05-06T21:56:01.537810+00:00",
+    "https://github.com/alex-w-developer/getblocked": "2026-07-04T21:57:07.811959+00:00",
     "https://github.com/alibaba/open-code-review": "2026-06-05T22:14:01.052164+00:00",
     "https://github.com/amal-david/pagecast": "2026-06-23T22:10:21.636823+00:00",
     "https://github.com/andyyyy64/whichllm": "2026-05-16T21:46:49.555743+00:00",
@@ -174,6 +178,7 @@
     "https://github.com/raiyanyahya/recall": "2026-06-22T22:46:30.764432+00:00",
     "https://github.com/regent-vcs/re_gent": "2026-05-08T21:57:56.054784+00:00",
     "https://github.com/reviewstage/stage-cli": "2026-05-08T21:57:56.054789+00:00",
+    "https://github.com/rochus-keller/busy": "2026-07-04T21:57:07.811957+00:00",
     "https://github.com/runtm-ai/runtm": "2026-05-21T22:18:29.628201+00:00",
     "https://github.com/runtypelabs/persona": "2026-06-25T22:19:50.037202+00:00",
     "https://github.com/s2-streamstore/replaya": "2026-06-03T23:05:16.204474+00:00",
@@ -407,6 +412,7 @@
     "https://www.politico.com/news/2026/06/01/openai-hit-with-florida-lawsuit-00944215": "2026-06-01T23:00:53.409675+00:00",
     "https://www.politico.com/news/2026/06/02/trump-signs-downsized-ai-order-00946389": "2026-06-02T23:01:18.595297+00:00",
     "https://www.reuters.com/technology/norway-imposes-near-ban-ai-elementary-school-2026-06-19": "2026-06-19T22:02:23.544808+00:00",
+    "https://www.reuters.com/world/china/alibaba-ban-claude-code-workplace-over-alleged-backdoor-risks-source-says-2026-07-03": "2026-07-04T21:57:07.811936+00:00",
     "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24": "2026-06-25T22:19:50.037172+00:00",
     "https://www.reuters.com/world/china/us-holds-off-blacklisting-chinas-deepseek-more-than-100-firms-deemed-security-2026-06-17": "2026-06-17T22:44:14.106922+00:00",
     "https://www.robert-glaser.de/when-everyone-has-ai-and-the-company-still-learns-nothing": "2026-05-05T22:00:13.410276+00:00",
@@ -436,6 +442,7 @@
     "https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model": "2026-06-26T22:11:52.427303+00:00",
     "https://www.wheresyoured.at/ai-is-slowing-down": "2026-06-08T22:25:14.666475+00:00",
     "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?reflink=desktopwebshare_permalink&st=Yct6gx": "2026-06-13T22:02:18.733208+00:00",
-    "https://www.zot.sh": "2026-05-30T22:00:19.013811+00:00"
+    "https://www.zot.sh": "2026-05-30T22:00:19.013811+00:00",
+    "https://zk.golf/": "2026-07-04T21:57:07.811953+00:00"
   }
 }
